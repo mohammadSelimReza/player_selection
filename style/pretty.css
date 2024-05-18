@@ -1,0 +1,20 @@
+main,nav{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.player-area{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card{
+    width: 280px !important;
+    height: 520px !important;
+}
+.card>img{
+    width: 278px;
+    height: 278px;
+}
+.des{
+    height: 70px;
+}

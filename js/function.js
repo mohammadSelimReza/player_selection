@@ -23,7 +23,9 @@ const addToCart = (player) => {
       const cartContainer = document.getElementById("cartContainer");
       const total = document.getElementById("total");
       let totalAdded = parseFloat(total.innerText);
-      console.log(totalAdded); 
+      // console.log(totalAdded);
+      const noPlayerMsg = document.getElementById("no-msg");
+      noPlayerMsg.innerHTML = " "; 
       if(totalAdded<11)
         {
           const h5 = document.createElement("h5");
@@ -60,10 +62,15 @@ const showModel = (player) =>{
                           <p class="card-text">Nationality: ${player.strNationality}</p>
                           <p class="card-text">Gender: ${player.strGender}</p>
                           <p class="card-text des">${shortDescription}</p>
+                          <div class="d-flex justify-content-evenly">
+                            <a target="_blank" href="https://${player.strFacebook}"><i class="fa-brands fa-facebook"></i>       </a>
+                            <a target="_blank" href="https://${player.strTwitter}"><i class="fa-brands fa-square-twitter"></i></a>
+                            <a target="_blank" href="https://${player.strInstagram}"><i class="fa-brands fa-instagram"></i></a>
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" onclick=loadDetails2(${player.idPlayer}) class="btn btn-primary">Add To Cart</button>
                         </div>
                       </div>
                     </div>
